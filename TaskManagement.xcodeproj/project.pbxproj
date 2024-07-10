@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A7F38B32C3EC65B00177246 /* CustomDatePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7F38B22C3EC65B00177246 /* CustomDatePickerCell.xib */; };
+		7A7F38B42C3EC65B00177246 /* CustomDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F38B12C3EC65B00177246 /* CustomDatePickerCell.swift */; };
 		7AA759012C3BDC3A005642BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA759002C3BDC3A005642BA /* AppDelegate.swift */; };
 		7AA759032C3BDC3A005642BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA759022C3BDC3A005642BA /* SceneDelegate.swift */; };
 		7AA759052C3BDC3A005642BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA759042C3BDC3A005642BA /* ViewController.swift */; };
@@ -17,6 +19,10 @@
 		7AA7591B2C3BDC3B005642BA /* TaskManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA7591A2C3BDC3B005642BA /* TaskManagementTests.swift */; };
 		7AA759252C3BDC3B005642BA /* TaskManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA759242C3BDC3B005642BA /* TaskManagementUITests.swift */; };
 		7AA759272C3BDC3B005642BA /* TaskManagementUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA759262C3BDC3B005642BA /* TaskManagementUITestsLaunchTests.swift */; };
+		7AA759362C3BDEF3005642BA /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA759352C3BDEF3005642BA /* StartView.swift */; };
+		7AA759392C3BE02D005642BA /* 12281499_4894122.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AA759382C3BE02D005642BA /* 12281499_4894122.jpg */; };
+		7AD8A00E2C3E5AAA00927E17 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A00D2C3E5AAA00927E17 /* HomeViewModel.swift */; };
+		7AD8A0112C3E5BAF00927E17 /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A0102C3E5BAF00927E17 /* AddTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A7F38B12C3EC65B00177246 /* CustomDatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePickerCell.swift; sourceTree = "<group>"; };
+		7A7F38B22C3EC65B00177246 /* CustomDatePickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDatePickerCell.xib; sourceTree = "<group>"; };
 		7AA758FD2C3BDC3A005642BA /* TaskManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA759002C3BDC3A005642BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AA759022C3BDC3A005642BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,10 @@
 		7AA759202C3BDC3B005642BA /* TaskManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA759242C3BDC3B005642BA /* TaskManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagementUITests.swift; sourceTree = "<group>"; };
 		7AA759262C3BDC3B005642BA /* TaskManagementUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagementUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7AA759352C3BDEF3005642BA /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		7AA759382C3BE02D005642BA /* 12281499_4894122.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12281499_4894122.jpg; sourceTree = "<group>"; };
+		7AD8A00D2C3E5AAA00927E17 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7AD8A0102C3E5BAF00927E17 /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +113,18 @@
 		7AA758FF2C3BDC3A005642BA /* TaskManagement */ = {
 			isa = PBXGroup;
 			children = (
+				7AA759332C3BDEBD005642BA /* Scenes */,
 				7AA759002C3BDC3A005642BA /* AppDelegate.swift */,
 				7AA759022C3BDC3A005642BA /* SceneDelegate.swift */,
 				7AA759042C3BDC3A005642BA /* ViewController.swift */,
 				7AA759062C3BDC3A005642BA /* Main.storyboard */,
 				7AA7590C2C3BDC3B005642BA /* Assets.xcassets */,
 				7AA7590E2C3BDC3B005642BA /* LaunchScreen.storyboard */,
+				7AA759372C3BE007005642BA /* Images */,
 				7AA759112C3BDC3B005642BA /* Info.plist */,
 				7AA759092C3BDC3A005642BA /* TaskManagement.xcdatamodeld */,
+				7A7F38B12C3EC65B00177246 /* CustomDatePickerCell.swift */,
+				7A7F38B22C3EC65B00177246 /* CustomDatePickerCell.xib */,
 			);
 			path = TaskManagement;
 			sourceTree = "<group>";
@@ -128,6 +144,48 @@
 				7AA759262C3BDC3B005642BA /* TaskManagementUITestsLaunchTests.swift */,
 			);
 			path = TaskManagementUITests;
+			sourceTree = "<group>";
+		};
+		7AA759332C3BDEBD005642BA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7AD8A00F2C3E5B9400927E17 /* Add Task */,
+				7AD8A00C2C3E5A9A00927E17 /* Home */,
+				7AA759342C3BDED6005642BA /* Starting */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7AA759342C3BDED6005642BA /* Starting */ = {
+			isa = PBXGroup;
+			children = (
+				7AA759352C3BDEF3005642BA /* StartView.swift */,
+			);
+			path = Starting;
+			sourceTree = "<group>";
+		};
+		7AA759372C3BE007005642BA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7AA759382C3BE02D005642BA /* 12281499_4894122.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		7AD8A00C2C3E5A9A00927E17 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7AD8A00D2C3E5AAA00927E17 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7AD8A00F2C3E5B9400927E17 /* Add Task */ = {
+			isa = PBXGroup;
+			children = (
+				7AD8A0102C3E5BAF00927E17 /* AddTask.swift */,
+			);
+			path = "Add Task";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +292,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AA759392C3BE02D005642BA /* 12281499_4894122.jpg in Resources */,
 				7AA7590D2C3BDC3B005642BA /* Assets.xcassets in Resources */,
 				7AA759102C3BDC3B005642BA /* Base in Resources */,
+				7A7F38B32C3EC65B00177246 /* CustomDatePickerCell.xib in Resources */,
 				7AA759082C3BDC3A005642BA /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,8 +322,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AA759052C3BDC3A005642BA /* ViewController.swift in Sources */,
+				7A7F38B42C3EC65B00177246 /* CustomDatePickerCell.swift in Sources */,
+				7AD8A00E2C3E5AAA00927E17 /* HomeViewModel.swift in Sources */,
+				7AA759362C3BDEF3005642BA /* StartView.swift in Sources */,
 				7AA759012C3BDC3A005642BA /* AppDelegate.swift in Sources */,
 				7AA759032C3BDC3A005642BA /* SceneDelegate.swift in Sources */,
+				7AD8A0112C3E5BAF00927E17 /* AddTask.swift in Sources */,
 				7AA7590B2C3BDC3A005642BA /* TaskManagement.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
