@@ -5,24 +5,25 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="yAo-E8-RFQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7g-aw-8Ju" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Y7G-DP-PoO" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4lh-OQ-Zcs">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KyP-iB-xr0"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UwR-FN-9KA"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v7g-aw-8Ju" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1579" y="2"/>
+            <point key="canvasLocation" x="-1871" y="-311"/>
         </scene>
         <!--Start View-->
         <scene sceneID="tne-QT-ifu">
@@ -51,7 +52,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <segue destination="7hq-AX-fgv" kind="push" id="l3O-hx-mBU"/>
+                                    <segue destination="Ifr-gA-Nh7" kind="push" id="vDS-mi-9Qe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boq-Fl-gcr">
@@ -94,39 +95,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-767.17557251908397" y="0.70422535211267612"/>
+            <point key="canvasLocation" x="-787" y="-311"/>
         </scene>
-        <!--Home View Model-->
-        <scene sceneID="UYX-Nn-9Bd">
+        <!--Home-->
+        <scene sceneID="QQ0-w6-g6L">
             <objects>
-                <viewController id="7hq-AX-fgv" customClass="HomeViewModel" customModule="TaskManagement" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6fa-yy-4MY">
+                <viewController id="GWf-49-XMB" customClass="HomeViewController" customModule="TaskManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ozf-gb-9qI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjH-gx-2yQ">
-                                <rect key="frame" x="308" y="747" width="55" height="41"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g0j-3G-LOG">
+                                <rect key="frame" x="0.0" y="153" width="393" height="616"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Xb-v9-xtc">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lNQ-BS-oge">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="esQ-Tx-XjA">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w28-Ba-rHH">
+                                <rect key="frame" x="172" y="103" width="49" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj7-SQ-Wy2">
+                                <rect key="frame" x="50" y="96" width="50" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Add"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.left.circle" catalog="system" title=""/>
                                 <connections>
-                                    <segue destination="FxT-hW-ggd" kind="push" id="o6Z-QR-29L"/>
+                                    <action selector="previousMonth:" destination="GWf-49-XMB" eventType="touchUpInside" id="TTn-QZ-EdW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLj-sF-Qhd">
+                                <rect key="frame" x="293" y="96" width="50" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.right.circle" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="nextMonth:" destination="GWf-49-XMB" eventType="touchUpInside" id="gXW-C3-D9H"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="rIS-To-Wwh"/>
+                        <viewLayoutGuide key="safeArea" id="cR7-8R-KMW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rIS-To-Wwh" firstAttribute="bottom" secondItem="PjH-gx-2yQ" secondAttribute="bottom" constant="30" id="Hfs-Bq-SQN"/>
-                            <constraint firstItem="rIS-To-Wwh" firstAttribute="trailing" secondItem="PjH-gx-2yQ" secondAttribute="trailing" constant="30" id="Txx-R0-CeE"/>
+                            <constraint firstItem="fj7-SQ-Wy2" firstAttribute="leading" secondItem="cR7-8R-KMW" secondAttribute="leading" constant="50" id="1VW-R3-Bip"/>
+                            <constraint firstItem="cR7-8R-KMW" firstAttribute="top" secondItem="fj7-SQ-Wy2" secondAttribute="top" constant="7" id="HCr-Ut-EQ3"/>
+                            <constraint firstItem="g0j-3G-LOG" firstAttribute="leading" secondItem="cR7-8R-KMW" secondAttribute="leading" id="I7m-qR-zD7"/>
+                            <constraint firstItem="cR7-8R-KMW" firstAttribute="bottom" secondItem="g0j-3G-LOG" secondAttribute="bottom" id="KnU-4E-4Jb"/>
+                            <constraint firstItem="g0j-3G-LOG" firstAttribute="top" secondItem="cR7-8R-KMW" secondAttribute="top" constant="50" id="ViT-mw-3gy"/>
+                            <constraint firstItem="cR7-8R-KMW" firstAttribute="trailing" secondItem="g0j-3G-LOG" secondAttribute="trailing" id="XBV-8a-2XT"/>
+                            <constraint firstItem="cR7-8R-KMW" firstAttribute="top" secondItem="fLj-sF-Qhd" secondAttribute="top" constant="7" id="gFl-Cc-Oxn"/>
+                            <constraint firstItem="w28-Ba-rHH" firstAttribute="top" secondItem="cR7-8R-KMW" secondAttribute="top" id="lIW-A5-kQd"/>
+                            <constraint firstItem="w28-Ba-rHH" firstAttribute="leading" secondItem="fj7-SQ-Wy2" secondAttribute="trailing" constant="72" id="r7K-RV-vD5"/>
+                            <constraint firstItem="fLj-sF-Qhd" firstAttribute="leading" secondItem="w28-Ba-rHH" secondAttribute="trailing" constant="72" id="v53-Zb-tc0"/>
+                            <constraint firstItem="cR7-8R-KMW" firstAttribute="trailing" secondItem="fLj-sF-Qhd" secondAttribute="trailing" constant="50" id="v7u-iX-SC0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7Yw-eO-Cqd"/>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house" catalog="system" id="yvN-52-cQg"/>
+                    <connections>
+                        <outlet property="collectionView" destination="g0j-3G-LOG" id="DEf-jG-Klm"/>
+                        <outlet property="leftButton" destination="fj7-SQ-Wy2" id="d8m-bU-3D5"/>
+                        <outlet property="monthLabel" destination="w28-Ba-rHH" id="6GJ-ZR-FLq"/>
+                        <outlet property="rightButton" destination="fLj-sF-Qhd" id="Krs-AY-gzE"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yny-Sz-Ge7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTV-h0-rMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-63" y="1"/>
+            <point key="canvasLocation" x="904.58015267175574" y="-1193.661971830986"/>
         </scene>
-        <!--Add Task-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="VQo-5E-dM1">
+            <objects>
+                <tabBarController id="Ifr-gA-Nh7" customClass="TabBarController" customModule="TaskManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Dcj-el-1qM"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kFM-YU-Rjc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="GWf-49-XMB" kind="relationship" relationship="viewControllers" id="DV2-bf-Q1L"/>
+                        <segue destination="FxT-hW-ggd" kind="relationship" relationship="viewControllers" id="HTd-d6-NpH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHc-92-iOS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="-889"/>
+        </scene>
+        <!--Add-->
         <scene sceneID="JIj-YQ-n9W">
             <objects>
                 <viewController id="FxT-hW-ggd" customClass="AddTask" customModule="TaskManagement" customModuleProvider="target" sceneMemberID="viewController">
@@ -135,7 +204,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6ev-M8-fBE">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CK8-QD-sQ9"/>
@@ -147,6 +216,7 @@
                             <constraint firstItem="6ev-M8-fBE" firstAttribute="top" secondItem="CK8-QD-sQ9" secondAttribute="top" id="zxo-tF-cIG"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Add" selectedImage="plus" catalog="system" id="udH-mh-QxH"/>
                     <navigationItem key="navigationItem" id="2O5-dZ-U13"/>
                     <connections>
                         <outlet property="tableView" destination="6ev-M8-fBE" id="O7L-sx-bzi"/>
@@ -154,10 +224,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sc-5J-vTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="707.63358778625957" y="0.70422535211267612"/>
+            <point key="canvasLocation" x="905" y="-501"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.left.circle" catalog="system" width="128" height="123"/>
+        <image name="arrowshape.right.circle" catalog="system" width="128" height="123"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
