@@ -9,9 +9,8 @@ import UIKit
 
 class CalendarCell: UICollectionViewCell {
 
-    @IBOutlet var month: UILabel!
-    @IBOutlet var date: UILabel!
     @IBOutlet var day: UILabel!
+    @IBOutlet var date: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

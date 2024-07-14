@@ -90,5 +90,10 @@ class CalendarDataSource {
         }
         return current
     }
+    func dayMonthYearString(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy" // Example format: 14 Jul 2024
+        return dateFormatter.string(from: date)
+    }
     
 }

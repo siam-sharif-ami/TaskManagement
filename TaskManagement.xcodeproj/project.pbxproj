@@ -21,12 +21,16 @@
 		7AA759272C3BDC3B005642BA /* TaskManagementUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA759262C3BDC3B005642BA /* TaskManagementUITestsLaunchTests.swift */; };
 		7AA759362C3BDEF3005642BA /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA759352C3BDEF3005642BA /* StartView.swift */; };
 		7AA759392C3BE02D005642BA /* 12281499_4894122.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AA759382C3BE02D005642BA /* 12281499_4894122.jpg */; };
-		7AB7AA462C3FA82300FCF45D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB7AA452C3FA82300FCF45D /* HomeViewController.swift */; };
+		7AB7AA462C3FA82300FCF45D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB7AA452C3FA82300FCF45D /* CalendarViewController.swift */; };
 		7AB7AA482C3FAF1900FCF45D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB7AA472C3FAF1900FCF45D /* TabBarController.swift */; };
 		7AB7AA4D2C3FD80C00FCF45D /* CalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB7AA4C2C3FD80C00FCF45D /* CalendarDataSource.swift */; };
 		7AB7AA552C3FF94C00FCF45D /* CalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB7AA542C3FF94C00FCF45D /* CalendarCell.xib */; };
 		7AB7AA562C3FF94C00FCF45D /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB7AA532C3FF94C00FCF45D /* CalendarCell.swift */; };
 		7AD8A0112C3E5BAF00927E17 /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A0102C3E5BAF00927E17 /* AddTask.swift */; };
+		7AEA04222C439222007B94AA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA04212C439222007B94AA /* HomeViewController.swift */; };
+		7AEA04252C43A038007B94AA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA04242C43A038007B94AA /* Event.swift */; };
+		7AEA04282C43C829007B94AA /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AEA04272C43C829007B94AA /* EventCell.xib */; };
+		7AEA04292C43C829007B94AA /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA04262C43C829007B94AA /* EventCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,12 +69,16 @@
 		7AA759262C3BDC3B005642BA /* TaskManagementUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagementUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7AA759352C3BDEF3005642BA /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		7AA759382C3BE02D005642BA /* 12281499_4894122.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12281499_4894122.jpg; sourceTree = "<group>"; };
-		7AB7AA452C3FA82300FCF45D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7AB7AA452C3FA82300FCF45D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		7AB7AA472C3FAF1900FCF45D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7AB7AA4C2C3FD80C00FCF45D /* CalendarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataSource.swift; sourceTree = "<group>"; };
 		7AB7AA532C3FF94C00FCF45D /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		7AB7AA542C3FF94C00FCF45D /* CalendarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCell.xib; sourceTree = "<group>"; };
 		7AD8A0102C3E5BAF00927E17 /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
+		7AEA04212C439222007B94AA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7AEA04242C43A038007B94AA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		7AEA04262C43C829007B94AA /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		7AEA04272C43C829007B94AA /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +129,7 @@
 		7AA758FF2C3BDC3A005642BA /* TaskManagement */ = {
 			isa = PBXGroup;
 			children = (
+				7AEA04232C43A02E007B94AA /* Model */,
 				7AB7AA4E2C3FF5A700FCF45D /* xib files */,
 				7AB7AA492C3FD7C100FCF45D /* Data Source */,
 				7AA759332C3BDEBD005642BA /* Scenes */,
@@ -159,6 +168,7 @@
 		7AA759332C3BDEBD005642BA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7AEA04202C439205007B94AA /* Calendar */,
 				7AD8A00F2C3E5B9400927E17 /* Add Task */,
 				7AD8A00C2C3E5A9A00927E17 /* Home */,
 				7AA759342C3BDED6005642BA /* Starting */,
@@ -195,6 +205,8 @@
 			children = (
 				7AB7AA532C3FF94C00FCF45D /* CalendarCell.swift */,
 				7AB7AA542C3FF94C00FCF45D /* CalendarCell.xib */,
+				7AEA04262C43C829007B94AA /* EventCell.swift */,
+				7AEA04272C43C829007B94AA /* EventCell.xib */,
 			);
 			path = "xib files";
 			sourceTree = "<group>";
@@ -202,8 +214,8 @@
 		7AD8A00C2C3E5A9A00927E17 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7AB7AA452C3FA82300FCF45D /* HomeViewController.swift */,
 				7AB7AA472C3FAF1900FCF45D /* TabBarController.swift */,
+				7AEA04212C439222007B94AA /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -214,6 +226,22 @@
 				7AD8A0102C3E5BAF00927E17 /* AddTask.swift */,
 			);
 			path = "Add Task";
+			sourceTree = "<group>";
+		};
+		7AEA04202C439205007B94AA /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				7AB7AA452C3FA82300FCF45D /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		7AEA04232C43A02E007B94AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7AEA04242C43A038007B94AA /* Event.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +350,7 @@
 			files = (
 				7AA759392C3BE02D005642BA /* 12281499_4894122.jpg in Resources */,
 				7AA7590D2C3BDC3B005642BA /* Assets.xcassets in Resources */,
+				7AEA04282C43C829007B94AA /* EventCell.xib in Resources */,
 				7AA759102C3BDC3B005642BA /* Base in Resources */,
 				7A7F38B32C3EC65B00177246 /* CustomDatePickerCell.xib in Resources */,
 				7AA759082C3BDC3A005642BA /* Base in Resources */,
@@ -354,13 +383,16 @@
 				7AA759052C3BDC3A005642BA /* ViewController.swift in Sources */,
 				7A7F38B42C3EC65B00177246 /* CustomDatePickerCell.swift in Sources */,
 				7AA759362C3BDEF3005642BA /* StartView.swift in Sources */,
+				7AEA04292C43C829007B94AA /* EventCell.swift in Sources */,
 				7AB7AA482C3FAF1900FCF45D /* TabBarController.swift in Sources */,
 				7AA759012C3BDC3A005642BA /* AppDelegate.swift in Sources */,
 				7AB7AA562C3FF94C00FCF45D /* CalendarCell.swift in Sources */,
-				7AB7AA462C3FA82300FCF45D /* HomeViewController.swift in Sources */,
+				7AB7AA462C3FA82300FCF45D /* CalendarViewController.swift in Sources */,
 				7AA759032C3BDC3A005642BA /* SceneDelegate.swift in Sources */,
 				7AD8A0112C3E5BAF00927E17 /* AddTask.swift in Sources */,
 				7AA7590B2C3BDC3A005642BA /* TaskManagement.xcdatamodeld in Sources */,
+				7AEA04222C439222007B94AA /* HomeViewController.swift in Sources */,
+				7AEA04252C43A038007B94AA /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

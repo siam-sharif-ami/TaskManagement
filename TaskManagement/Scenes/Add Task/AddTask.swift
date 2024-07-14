@@ -10,42 +10,46 @@ import UIKit
 
 class AddTask : UIViewController {
     
-    @IBOutlet private var tableView: UITableView!
+    @IBOutlet weak var eventTitleLabel: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var eventDescriptionLabel: UILabel!
+    @IBOutlet weak var eventDescriptionField: UITextField!
+    @IBOutlet weak var eventDatePicker: UIDatePicker!
+    @IBOutlet weak var eventSaveButton: UIButton!
+    @IBOutlet weak var isCompletedLabel: UILabel!
     
-    
+    @IBOutlet weak var isCompleted: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Add Project"
-        let nib = UINib(nibName: "CustomDatePickerCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "CustomDatePickerCell")
-        tableView.alwaysBounceVertical = false
-        tableView.delegate = self
-        tableView.dataSource = self
+        navigationItem.title = "Add Event"
+        tabBarItem.image = UIImage(named: "plus")
+        tabBarItem.title = "Add"
+        eventDatePicker.date = selectedDate
+       
     }
-}
-
-extension AddTask: UITableViewDelegate {
     
+    
+    
+    @IBAction func saveAction(_ sender: Any ){
+        let newEvent = Event()
+        if let name = textField.text {
+            newEvent.title = name
+        }
+        if let description = eventDescriptionField.text {
+            newEvent.description = description
+        }
+        newEvent.dueDate = eventDatePicker.date
+        newEvent.isCompleted = isCompleted.isOn
+        
+        if eventsList[CalendarDataSource().dayMonthYearString(date: newEvent.dueDate)] == nil {
+            eventsList[CalendarDataSource().dayMonthYearString(date: newEvent.dueDate)] = [newEvent]
+        }else {
+            eventsList[CalendarDataSource().dayMonthYearString(date: newEvent.dueDate)]?.append(newEvent)
+        }
+        
+    }
 }
 
-extension AddTask: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-            case 0:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CustomDatePickerCell", for: indexPath) as! CustomDatePickerCell
-                cell.label.text = "Start Date"
-                cell.datePicker.date = Date()
-                return cell
-            case 1:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CustomDatePickerCell", for: indexPath) as! CustomDatePickerCell
-                cell.label.text = "End Date"
-                return cell
-        default:
-            fatalError("Unexpected row index")
-        }
-    }
-}
+
+
