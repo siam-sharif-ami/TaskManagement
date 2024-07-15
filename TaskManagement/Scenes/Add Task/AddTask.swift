@@ -22,9 +22,6 @@ class AddTask : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Add Event"
-        tabBarItem.image = UIImage(named: "plus")
-        tabBarItem.title = "Add"
         eventDatePicker.date = selectedDate
        
     }
@@ -48,6 +45,15 @@ class AddTask : UIViewController {
             eventsList[CalendarDataSource().dayMonthYearString(date: newEvent.dueDate)]?.append(newEvent)
         }
         
+        let alertController = UIAlertController()
+        alertController.title = "Success"
+        
+        let okay = UIAlertAction(title: "ok", style: UIAlertAction.Style.default) { action in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        alertController.addAction(okay)
+        present(alertController, animated: true, completion: nil)
     }
 }
 

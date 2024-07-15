@@ -9,10 +9,12 @@ import UIKit
 
 class EventCell: UITableViewCell {
 
-    @IBOutlet var eventTitle: UILabel!
-    @IBOutlet var clockImage: UIImageView!
-    @IBOutlet var time:UILabel!
-    @IBOutlet var isCompleted: UILabel!
+    @IBOutlet weak var taskLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var clockImageView: UIImageView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var taskIconView: UIImageView!
     
     
     override func awakeFromNib() {

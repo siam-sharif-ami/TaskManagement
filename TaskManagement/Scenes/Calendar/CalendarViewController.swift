@@ -18,6 +18,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
     
+    
     var totalSquares = [Date]()
     
     override func viewDidLoad() {
@@ -25,12 +26,9 @@ class CalendarViewController: UIViewController {
         
         print(CalendarDataSource().dayMonthYearString(date: selectedDate))
         
-        self.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "calendar"), selectedImage: UIImage(named: "calendar-selected"))
-        
         setMonthView()
         setUpCollectionView()
         setUpTableView()
-        scrollToSelectedDate()
         
     }
     
@@ -38,7 +36,6 @@ class CalendarViewController: UIViewController {
         super.viewDidAppear(animated)
         collectionView.reloadData()
         tableView.reloadData()
-        scrollToSelectedDate()
     }
     
     private func setMonthView(){
@@ -51,7 +48,7 @@ class CalendarViewController: UIViewController {
             totalSquares.append(current)
             current = CalendarDataSource().addDays(date: current, days: 1)
         }
-
+        
         monthLabel.text = CalendarDataSource().monthString(date: selectedDate)
         + " " + CalendarDataSource().yearString(date: selectedDate)
         
@@ -77,17 +74,11 @@ class CalendarViewController: UIViewController {
         
     }
     
-    private func scrollToSelectedDate() {
-        guard let selectedIndex = totalSquares.firstIndex(of: selectedDate) else { return }
-        let indexPath = IndexPath(item: selectedIndex, section: 0)
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-    }
-
     
     @IBAction func previousWeek(_ sender: Any){
         selectedDate = CalendarDataSource().addDays(date: selectedDate, days: -7)
         setMonthView()
-
+        
     }
     @IBAction func nextWeek(_ sender: Any){
         selectedDate = CalendarDataSource().addDays(date: selectedDate, days: 7)
@@ -150,17 +141,18 @@ extension CalendarViewController: UICollectionViewDelegateFlowLayout {
             if section == 0 {
                 let item = NSCollectionLayoutItem(
                     layoutSize: NSCollectionLayoutSize(
-                        widthDimension: .fractionalWidth(1/7), heightDimension: .fractionalHeight(1)
+                        widthDimension: .fractionalWidth(1/5), heightDimension: .fractionalHeight(1)
                     )
                 )
                 item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
                 
                 
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(80)), subitem: item, count: 7)
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(100)), subitem: item, count: 5)
                 
-                group.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0)
+                group.contentInsets = NSDirectionalEdgeInsets(top: 3, leading: 0, bottom: 3, trailing: 0)
                 
                 let section = NSCollectionLayoutSection(group: group)
+                section.orthogonalScrollingBehavior = .continuous
                 section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
                 
                 return section
@@ -196,12 +188,11 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
         let event = Event().eventsForDate(date: selectedDate)[indexPath.row]
         print(event.dueDate)
-        cell.eventTitle.text = event.title
-        cell.time.text = CalendarDataSource().timeString(date: event.dueDate)
-        cell.clockImage.image = UIImage(named: "clock.fill")
-        cell.isCompleted.text = event.isCompleted == true ? "Done" : "In Progress"
-        cell.isCompleted.layer.cornerRadius = 10
-        cell.isCompleted.tintColor = .systemPurple
+        cell.taskLabel.text = "Unknown"
+        cell.titleLabel.text = event.title
+        cell.contentView.layer.cornerRadius = 10
+        cell.timeLabel.text = CalendarDataSource().timeString(date: event.dueDate)
+        cell.progressLabel.text = event.isCompleted == true ? "Done" : "In Progress"
         return cell
     }
     

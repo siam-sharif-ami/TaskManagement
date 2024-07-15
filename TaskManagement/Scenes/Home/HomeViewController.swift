@@ -10,12 +10,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBackground
-        tabBarItem.title = "House"
-        tabBarItem.image = UIImage(named: "house")
+        
     }
     
 }

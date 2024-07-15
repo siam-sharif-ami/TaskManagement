@@ -26,6 +26,7 @@
 		7AB7AA4D2C3FD80C00FCF45D /* CalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB7AA4C2C3FD80C00FCF45D /* CalendarDataSource.swift */; };
 		7AB7AA552C3FF94C00FCF45D /* CalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB7AA542C3FF94C00FCF45D /* CalendarCell.xib */; };
 		7AB7AA562C3FF94C00FCF45D /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB7AA532C3FF94C00FCF45D /* CalendarCell.swift */; };
+		7AC6C4342C4556B00026FDFC /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC6C4332C4556B00026FDFC /* TestView.swift */; };
 		7AD8A0112C3E5BAF00927E17 /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A0102C3E5BAF00927E17 /* AddTask.swift */; };
 		7AEA04222C439222007B94AA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA04212C439222007B94AA /* HomeViewController.swift */; };
 		7AEA04252C43A038007B94AA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA04242C43A038007B94AA /* Event.swift */; };
@@ -74,6 +75,7 @@
 		7AB7AA4C2C3FD80C00FCF45D /* CalendarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataSource.swift; sourceTree = "<group>"; };
 		7AB7AA532C3FF94C00FCF45D /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		7AB7AA542C3FF94C00FCF45D /* CalendarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCell.xib; sourceTree = "<group>"; };
+		7AC6C4332C4556B00026FDFC /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		7AD8A0102C3E5BAF00927E17 /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
 		7AEA04212C439222007B94AA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7AEA04242C43A038007B94AA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				7AD8A0102C3E5BAF00927E17 /* AddTask.swift */,
+				7AC6C4332C4556B00026FDFC /* TestView.swift */,
 			);
 			path = "Add Task";
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				7AA759362C3BDEF3005642BA /* StartView.swift in Sources */,
 				7AEA04292C43C829007B94AA /* EventCell.swift in Sources */,
 				7AB7AA482C3FAF1900FCF45D /* TabBarController.swift in Sources */,
+				7AC6C4342C4556B00026FDFC /* TestView.swift in Sources */,
 				7AA759012C3BDC3A005642BA /* AppDelegate.swift in Sources */,
 				7AB7AA562C3FF94C00FCF45D /* CalendarCell.swift in Sources */,
 				7AB7AA462C3FA82300FCF45D /* CalendarViewController.swift in Sources */,
