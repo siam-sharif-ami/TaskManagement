@@ -32,4 +32,26 @@ class Event {
         }
         return daysEvents
     }
+    
+    func thisMonthsPendingEvents(date: Date) -> [Event]{
+        
+        var monthsPendingItems = [Event]()
+        let monthName: String = CalendarDataSource().monthString(date: date)
+        
+        print(monthName)
+        for date in eventsList {
+            let dateKeyComponents = date.key.split(separator: " ")
+            /// dateKeyComponents return 15 Jul 2024 in an array
+            /// 
+            if monthName == dateKeyComponents[1] {
+                let arrayOfEvents = date.value
+                for event in arrayOfEvents {
+                    if event.isCompleted == false {
+                        monthsPendingItems.append(event)
+                    }
+                }
+            }
+        }
+        return monthsPendingItems
+    }
 }
