@@ -26,10 +26,12 @@ class CalendarViewController: UIViewController {
         
         print(CalendarDataSource().dayMonthYearString(date: selectedDate))
         
+        
+//        collectionView.dataSource = dataSource
+        //// setup views
         setMonthView()
         setUpCollectionView()
         setUpTableView()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -95,7 +97,7 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         totalSquares.count
-        //        return section == 1 ? 1: 5
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

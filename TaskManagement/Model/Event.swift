@@ -54,4 +54,37 @@ class Event {
         }
         return monthsPendingItems
     }
+    
+    func thisMonthsDoneEvents(date: Date) -> [Event]{
+        var monthsDoneItems = [Event]()
+        let monthName: String = CalendarDataSource().monthString(date: date)
+        
+        for date in eventsList {
+            let dateKeyComponents = date.key.split(separator: " ")
+            
+            if monthName == dateKeyComponents[1] {
+                let arrayOfEvents = date.value
+                for event in arrayOfEvents {
+                    if event.isCompleted == true {
+                        monthsDoneItems.append(event)
+                    }
+                }
+            }
+        }
+        return monthsDoneItems
+    }
 }
+
+#if DEBUG
+extension Event {
+    
+    static var sampleData = [
+        Event(title: "Hello",description: "hello world hello world", dueDate: Date.now,isCompleted: false ),
+        Event(title: "Go to gym",description: "hello world hello world", dueDate: Date.now,isCompleted: false ),
+        Event(title: "Have more fun",description: "hello world hello world", dueDate: Date.now,isCompleted: true ),
+        Event(title: "Meooowww",description: "hello world hello world", dueDate: Date.now,isCompleted: false ),
+        Event(title: "study smart",description: "hello world hello world", dueDate: Date.now,isCompleted: true )
+    ]
+}
+
+#endif

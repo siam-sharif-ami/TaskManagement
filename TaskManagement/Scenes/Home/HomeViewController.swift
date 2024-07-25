@@ -11,9 +11,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    
     @IBOutlet var doneLabel: UILabel!
-    @IBOutlet var inprogressLabel:UILabel!
+    @IBOutlet var inprogressLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var userLabel: UILabel!
     @IBOutlet var pendingTaskLabel: UILabel!
@@ -22,13 +21,14 @@ class HomeViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
     var monthsPendingItems: [Event] = []
-    
+    var monthsDoneItems:[Event] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateAllPreviews()
         setUpCollectionView()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,9 +38,10 @@ class HomeViewController: UIViewController {
     
     private func updateAllPreviews(){
         monthsPendingItems = Event().thisMonthsPendingEvents(date: Date.now)
+        monthsDoneItems = Event().thisMonthsDoneEvents(date: Date.now)
         inprogressLabel.text = "\(monthsPendingItems.count)"
         pendingTaskLabel.text = "\(monthsPendingItems.count) Tasks are pending"
-        
+        doneLabel.text = "\(monthsDoneItems.count)"
         dateLabel.text = CalendarDataSource().dayMonthYearString(date: Date.now)
     }
     
@@ -101,10 +102,4 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
             return nil
         }
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: collectionView.bounds.width, height: 150)
-//    }
-    
-    
 }

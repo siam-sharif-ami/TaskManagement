@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A10E0052C52217F00483BDF /* taskGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10E0032C52217F00483BDF /* taskGroupTableViewCell.swift */; };
+		7A10E0062C52217F00483BDF /* taskGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A10E0042C52217F00483BDF /* taskGroupTableViewCell.xib */; };
+		7A10E0092C52253200483BDF /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10E0072C52253200483BDF /* DescriptionTableViewCell.swift */; };
+		7A10E00A2C52253200483BDF /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A10E0082C52253200483BDF /* DescriptionTableViewCell.xib */; };
+		7A10E0132C522A7500483BDF /* SaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10E0112C522A7500483BDF /* SaveTableViewCell.swift */; };
+		7A10E0142C522A7500483BDF /* SaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A10E0122C522A7500483BDF /* SaveTableViewCell.xib */; };
+		7A10E0172C5239D500483BDF /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A10E0162C5239D500483BDF /* TitleTableViewCell.xib */; };
+		7A10E0182C5239D500483BDF /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10E0152C5239D500483BDF /* TitleTableViewCell.swift */; };
 		7A7F38B32C3EC65B00177246 /* CustomDatePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7F38B22C3EC65B00177246 /* CustomDatePickerCell.xib */; };
 		7A7F38B42C3EC65B00177246 /* CustomDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F38B12C3EC65B00177246 /* CustomDatePickerCell.swift */; };
 		7AA759012C3BDC3A005642BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA759002C3BDC3A005642BA /* AppDelegate.swift */; };
@@ -29,7 +37,7 @@
 		7AC27BAC2C46643C00AB649D /* PendingTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC27BAA2C46643C00AB649D /* PendingTaskCell.swift */; };
 		7AC27BAD2C46643C00AB649D /* PendingTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AC27BAB2C46643C00AB649D /* PendingTaskCell.xib */; };
 		7AC6C4342C4556B00026FDFC /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC6C4332C4556B00026FDFC /* TestView.swift */; };
-		7AD8A0112C3E5BAF00927E17 /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A0102C3E5BAF00927E17 /* AddTask.swift */; };
+		7AD8A0112C3E5BAF00927E17 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A0102C3E5BAF00927E17 /* AddTaskViewController.swift */; };
 		7AEA04222C439222007B94AA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA04212C439222007B94AA /* HomeViewController.swift */; };
 		7AEA04252C43A038007B94AA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA04242C43A038007B94AA /* Event.swift */; };
 		7AEA04282C43C829007B94AA /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AEA04272C43C829007B94AA /* EventCell.xib */; };
@@ -54,6 +62,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A10E0032C52217F00483BDF /* taskGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskGroupTableViewCell.swift; sourceTree = "<group>"; };
+		7A10E0042C52217F00483BDF /* taskGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = taskGroupTableViewCell.xib; sourceTree = "<group>"; };
+		7A10E0072C52253200483BDF /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		7A10E0082C52253200483BDF /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		7A10E0112C522A7500483BDF /* SaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTableViewCell.swift; sourceTree = "<group>"; };
+		7A10E0122C522A7500483BDF /* SaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveTableViewCell.xib; sourceTree = "<group>"; };
+		7A10E0152C5239D500483BDF /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		7A10E0162C5239D500483BDF /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		7A7F38B12C3EC65B00177246 /* CustomDatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePickerCell.swift; sourceTree = "<group>"; };
 		7A7F38B22C3EC65B00177246 /* CustomDatePickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDatePickerCell.xib; sourceTree = "<group>"; };
 		7AA758FD2C3BDC3A005642BA /* TaskManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +96,7 @@
 		7AC27BAA2C46643C00AB649D /* PendingTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingTaskCell.swift; sourceTree = "<group>"; };
 		7AC27BAB2C46643C00AB649D /* PendingTaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PendingTaskCell.xib; sourceTree = "<group>"; };
 		7AC6C4332C4556B00026FDFC /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		7AD8A0102C3E5BAF00927E17 /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
+		7AD8A0102C3E5BAF00927E17 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		7AEA04212C439222007B94AA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7AEA04242C43A038007B94AA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		7AEA04262C43C829007B94AA /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
@@ -112,6 +128,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A10E00F2C5228C300483BDF /* AddProjectTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7A10E0152C5239D500483BDF /* TitleTableViewCell.swift */,
+				7A10E0162C5239D500483BDF /* TitleTableViewCell.xib */,
+				7A10E0072C52253200483BDF /* DescriptionTableViewCell.swift */,
+				7A10E0082C52253200483BDF /* DescriptionTableViewCell.xib */,
+				7A10E0032C52217F00483BDF /* taskGroupTableViewCell.swift */,
+				7A10E0042C52217F00483BDF /* taskGroupTableViewCell.xib */,
+				7A10E0112C522A7500483BDF /* SaveTableViewCell.swift */,
+				7A10E0122C522A7500483BDF /* SaveTableViewCell.xib */,
+			);
+			path = AddProjectTableViewCells;
+			sourceTree = "<group>";
+		};
+		7A10E0102C5228D300483BDF /* CalendarViewCollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7AB7AA532C3FF94C00FCF45D /* CalendarCell.swift */,
+				7AB7AA542C3FF94C00FCF45D /* CalendarCell.xib */,
+				7AEA04262C43C829007B94AA /* EventCell.swift */,
+				7AEA04272C43C829007B94AA /* EventCell.xib */,
+				7AC27BAA2C46643C00AB649D /* PendingTaskCell.swift */,
+				7AC27BAB2C46643C00AB649D /* PendingTaskCell.xib */,
+			);
+			path = CalendarViewCollectionViewCells;
+			sourceTree = "<group>";
+		};
 		7AA758F42C3BDC3A005642BA = {
 			isa = PBXGroup;
 			children = (
@@ -135,9 +179,9 @@
 		7AA758FF2C3BDC3A005642BA /* TaskManagement */ = {
 			isa = PBXGroup;
 			children = (
+				7AB7AA492C3FD7C100FCF45D /* Data Source */,
 				7AEA04232C43A02E007B94AA /* Model */,
 				7AB7AA4E2C3FF5A700FCF45D /* xib files */,
-				7AB7AA492C3FD7C100FCF45D /* Data Source */,
 				7AA759332C3BDEBD005642BA /* Scenes */,
 				7AA759002C3BDC3A005642BA /* AppDelegate.swift */,
 				7AA759022C3BDC3A005642BA /* SceneDelegate.swift */,
@@ -209,12 +253,8 @@
 		7AB7AA4E2C3FF5A700FCF45D /* xib files */ = {
 			isa = PBXGroup;
 			children = (
-				7AB7AA532C3FF94C00FCF45D /* CalendarCell.swift */,
-				7AB7AA542C3FF94C00FCF45D /* CalendarCell.xib */,
-				7AEA04262C43C829007B94AA /* EventCell.swift */,
-				7AEA04272C43C829007B94AA /* EventCell.xib */,
-				7AC27BAA2C46643C00AB649D /* PendingTaskCell.swift */,
-				7AC27BAB2C46643C00AB649D /* PendingTaskCell.xib */,
+				7A10E0102C5228D300483BDF /* CalendarViewCollectionViewCells */,
+				7A10E00F2C5228C300483BDF /* AddProjectTableViewCells */,
 			);
 			path = "xib files";
 			sourceTree = "<group>";
@@ -231,7 +271,7 @@
 		7AD8A00F2C3E5B9400927E17 /* Add Task */ = {
 			isa = PBXGroup;
 			children = (
-				7AD8A0102C3E5BAF00927E17 /* AddTask.swift */,
+				7AD8A0102C3E5BAF00927E17 /* AddTaskViewController.swift */,
 				7AC6C4332C4556B00026FDFC /* TestView.swift */,
 			);
 			path = "Add Task";
@@ -357,14 +397,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A10E0172C5239D500483BDF /* TitleTableViewCell.xib in Resources */,
 				7AA759392C3BE02D005642BA /* 12281499_4894122.jpg in Resources */,
 				7AA7590D2C3BDC3B005642BA /* Assets.xcassets in Resources */,
 				7AEA04282C43C829007B94AA /* EventCell.xib in Resources */,
+				7A10E0142C522A7500483BDF /* SaveTableViewCell.xib in Resources */,
 				7AA759102C3BDC3B005642BA /* Base in Resources */,
 				7AC27BAD2C46643C00AB649D /* PendingTaskCell.xib in Resources */,
 				7A7F38B32C3EC65B00177246 /* CustomDatePickerCell.xib in Resources */,
+				7A10E00A2C52253200483BDF /* DescriptionTableViewCell.xib in Resources */,
 				7AA759082C3BDC3A005642BA /* Base in Resources */,
 				7AB7AA552C3FF94C00FCF45D /* CalendarCell.xib in Resources */,
+				7A10E0062C52217F00483BDF /* taskGroupTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,11 +433,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A10E0182C5239D500483BDF /* TitleTableViewCell.swift in Sources */,
+				7A10E0132C522A7500483BDF /* SaveTableViewCell.swift in Sources */,
 				7AB7AA4D2C3FD80C00FCF45D /* CalendarDataSource.swift in Sources */,
 				7AA759052C3BDC3A005642BA /* ViewController.swift in Sources */,
 				7A7F38B42C3EC65B00177246 /* CustomDatePickerCell.swift in Sources */,
 				7AA759362C3BDEF3005642BA /* StartView.swift in Sources */,
 				7AEA04292C43C829007B94AA /* EventCell.swift in Sources */,
+				7A10E0052C52217F00483BDF /* taskGroupTableViewCell.swift in Sources */,
 				7AB7AA482C3FAF1900FCF45D /* TabBarController.swift in Sources */,
 				7AC6C4342C4556B00026FDFC /* TestView.swift in Sources */,
 				7AA759012C3BDC3A005642BA /* AppDelegate.swift in Sources */,
@@ -401,9 +448,10 @@
 				7AB7AA562C3FF94C00FCF45D /* CalendarCell.swift in Sources */,
 				7AB7AA462C3FA82300FCF45D /* CalendarViewController.swift in Sources */,
 				7AA759032C3BDC3A005642BA /* SceneDelegate.swift in Sources */,
-				7AD8A0112C3E5BAF00927E17 /* AddTask.swift in Sources */,
+				7AD8A0112C3E5BAF00927E17 /* AddTaskViewController.swift in Sources */,
 				7AA7590B2C3BDC3A005642BA /* TaskManagement.xcdatamodeld in Sources */,
 				7AEA04222C439222007B94AA /* HomeViewController.swift in Sources */,
+				7A10E0092C52253200483BDF /* DescriptionTableViewCell.swift in Sources */,
 				7AEA04252C43A038007B94AA /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
