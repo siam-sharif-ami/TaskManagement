@@ -19,6 +19,8 @@ class HomeViewController: UIViewController {
     @IBOutlet var searchIconView: UIImageView!
     @IBOutlet var profileIconView: UIImageView!
     @IBOutlet var collectionView: UICollectionView!
+
+    @IBOutlet weak var heightForCollectionView: NSLayoutConstraint!
     
     var monthsPendingItems: [Event] = []
     var monthsDoneItems:[Event] = []
@@ -26,11 +28,15 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        heightForCollectionView.constant = 0
         updateAllPreviews()
         setUpCollectionView()
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        heightForCollectionView.constant = monthsPendingItems.count == 0 ? 0 : 150
+    }
     override func viewDidAppear(_ animated: Bool) {
         updateAllPreviews()
         collectionView.reloadData()
@@ -40,7 +46,7 @@ class HomeViewController: UIViewController {
         monthsPendingItems = CalendarDataSource().thisMonthsPendingEvents(date: Date.now)
         monthsDoneItems = CalendarDataSource().thisMonthsDoneEvents(date: Date.now)
         inprogressLabel.text = "\(monthsPendingItems.count)"
-        pendingTaskLabel.text = "\(monthsPendingItems.count) Tasks are pending"
+        pendingTaskLabel.text = monthsPendingItems.count <= 1 ? "\(monthsPendingItems.count) Task pending" : "\(monthsPendingItems.count) Tasks pending"
         doneLabel.text = "\(monthsDoneItems.count)"
         dateLabel.text = CalendarDataSource().dayMonthYearString(date: Date.now)
     }

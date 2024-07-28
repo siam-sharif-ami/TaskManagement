@@ -280,6 +280,7 @@
                         <outlet property="collectionView" destination="Q3d-iq-O95" id="xzn-Jt-VEI"/>
                         <outlet property="dateLabel" destination="VFL-6o-KTx" id="8JO-xz-NAr"/>
                         <outlet property="doneLabel" destination="nrX-3j-WM4" id="kYO-M7-HtZ"/>
+                        <outlet property="heightForCollectionView" destination="luV-KG-d3A" id="AYb-WG-DJK"/>
                         <outlet property="inprogressLabel" destination="Zm2-Qe-2CS" id="8hf-7K-yGT"/>
                         <outlet property="pendingTaskLabel" destination="kvH-Px-PxK" id="aaG-5C-ZrJ"/>
                         <outlet property="profileIconView" destination="AHB-xN-IV1" id="9Ub-oV-t5T"/>
