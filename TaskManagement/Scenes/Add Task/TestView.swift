@@ -39,7 +39,7 @@ class TestView: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
-        let newEvent = Event()
+        var newEvent = Event()
         if let name = titleField.text {
             newEvent.title = name
         }

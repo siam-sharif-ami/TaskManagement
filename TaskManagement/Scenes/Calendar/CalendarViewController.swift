@@ -183,12 +183,12 @@ extension CalendarViewController: UICollectionViewDelegateFlowLayout {
 
 extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        Event().eventsForDate(date: selectedDate).count
+        CalendarDataSource().eventsForDate(date: selectedDate).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
-        let event = Event().eventsForDate(date: selectedDate)[indexPath.row]
+        let event = CalendarDataSource().eventsForDate(date: selectedDate)[indexPath.row]
         print(event.dueDate)
         cell.taskLabel.text = "Unknown"
         cell.titleLabel.text = event.title

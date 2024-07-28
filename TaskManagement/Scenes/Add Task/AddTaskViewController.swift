@@ -7,7 +7,8 @@ class AddTaskViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var button: UIButton!
     
-    var event: Event = Event()
+    var newEvent: Event = Event()
+    var placeHolder = ["Enter Project Here", "Enter Description Here"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +28,18 @@ class AddTaskViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
-        if eventsList[CalendarDataSource().dayMonthYearString(date: event.dueDate)] == nil {
-            eventsList[CalendarDataSource().dayMonthYearString(date:event.dueDate)] = [event]
+        print(newEvent.dueDate)
+        let dateString = CalendarDataSource().dayMonthYearString(date: newEvent.dueDate)
+        print(dateString)
+        
+        if eventsList[dateString] == nil {
+            eventsList[dateString] = [newEvent]
         } else {
-            eventsList[CalendarDataSource().dayMonthYearString(date: event.dueDate)]?.append(event)
+            print(eventsList[CalendarDataSource().dayMonthYearString(date: newEvent.dueDate)])
+            eventsList[dateString]?.append(newEvent)
         }
         
-        print(event)
-        selectedDate = event.dueDate
+        selectedDate = newEvent.dueDate
         
         let alertController = UIAlertController(title: "Success", message: nil, preferredStyle: .alert)
         
@@ -59,48 +64,50 @@ extension AddTaskViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TitleTableViewCell", for: indexPath) as! TitleTableViewCell
-            cell.titleTextField.delegate = self
+            cell.titleTextField.placeholder = placeHolder[indexPath.row]
+            cell.delegate = self
             return cell
         } 
         
         else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as! DescriptionTableViewCell
-            cell.itemDescription.delegate = self
+            cell.itemDescription.placeholder = placeHolder[indexPath.row]
+            cell.delegate = self
             return cell
         }
         
         else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "taskGroupTableViewCell", for: indexPath) as! taskGroupTableViewCell
-            cell.datePicker.addTarget(self, action: #selector(datePickerChanged(_:)), for: .valueChanged)
+            cell.delegate = self
             return cell
         } 
         
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SaveTableViewCell", for: indexPath) as! SaveTableViewCell
-            cell.onSwitch.addTarget(self, action: #selector(switchChanged(_:)), for: .valueChanged)
+            cell.delegate = self
             return cell
         }
     }
 }
+extension AddTaskViewController: TitleTableViewCellDelegate, DescriptionTableViewCellDelegate,taskGroupTableViewCellDelegate, SaveTableViewCellDelegate {
+    
+    func getSwitchState(isSwitchOn: Bool) {
+        //print(isSwitchOn)
+        newEvent.isCompleted = isSwitchOn
+    }
+    
+    func getDate(date: Date) {
+        //print("Date: \(date)")
+        newEvent.dueDate = date
+    }
+    
 
-extension AddTaskViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if let cell = textField.superview?.superview as? TitleTableViewCell, textField == cell.titleTextField {
-            event.title = textField.text ?? "whats happening"
-        } else if let cell = textField.superview?.superview as? DescriptionTableViewCell, textField == cell.itemDescription {
-            event.description = textField.text ?? "what's wrong"
-        }
+    func getTextFieldData(textFieldText: String) {
+        //print(textFieldText)
+        newEvent.title = textFieldText
     }
-    
-    @objc func datePickerChanged(_ sender: UIDatePicker) {
-        if let cell = sender.superview?.superview as? taskGroupTableViewCell {
-            event.dueDate = sender.date
-        }
-    }
-    
-    @objc func switchChanged(_ sender: UISwitch) {
-        if let cell = sender.superview?.superview as? SaveTableViewCell {
-            event.isCompleted = sender.isOn
-        }
+    func getDescriptionData(itemDescriptionText: String) {
+        //print(itemDescriptionText)
+        newEvent.description = itemDescriptionText
     }
 }

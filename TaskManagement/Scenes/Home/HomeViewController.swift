@@ -37,8 +37,8 @@ class HomeViewController: UIViewController {
     }
     
     private func updateAllPreviews(){
-        monthsPendingItems = Event().thisMonthsPendingEvents(date: Date.now)
-        monthsDoneItems = Event().thisMonthsDoneEvents(date: Date.now)
+        monthsPendingItems = CalendarDataSource().thisMonthsPendingEvents(date: Date.now)
+        monthsDoneItems = CalendarDataSource().thisMonthsDoneEvents(date: Date.now)
         inprogressLabel.text = "\(monthsPendingItems.count)"
         pendingTaskLabel.text = "\(monthsPendingItems.count) Tasks are pending"
         doneLabel.text = "\(monthsDoneItems.count)"
